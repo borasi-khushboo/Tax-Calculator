@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Our Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- BootStrap icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <title>Tax Deduction Machine</title>
+</head>
+
+<body>
+  <!-- Form starts here -->
+
+  <h2 class="text-center mt-4 title">Welcome to tax deduction Machine </h2>
+
+  <form action="" id="form" class="mt-0">
+
+    <!-- input for annual income starts here -->
+    <label for="a_inc">Enter gross annual income <span class="tt" data-bs-placement="bottom"
+        title="Gross annual income is your total income in a year without any deduction"><i
+          class=" bi bi-question-circle"></i></span> </label>
+
+          
+    <div class="flex-nowrap input-group form-group">
+      <input type="text" id="a_inc"  placeholder="gross income" aria-describedby="addon-wrapping" class="form-control"
+        style="border-right:none ;" required>
+      <span class="input-group-text error-icon tt" data-bs-placement="bottom" title="Please Enter numbers only" id="addon-wrapping" style="background-color: white; border-left: none;">
+        <i class="bi bi-exclamation-circle"></i>
+      </span>
+    </div>
+    <!-- input for annual income ends here -->
+
+    <!-- input for extra income starts here -->
+    <label for="e_inc">Enter extra income <span class="tt" data-bs-placement="bottom"
+        title="Enter your income from all other sources"><i class="bi bi-question-circle"></i></span>
+       </label>
+
+    <div class="flex-nowrap  form-group input-group">
+      <input type="text" id="e_inc"  placeholder="Enter extra income" aria-describedby="addon-wrapping"
+        class="form-control" style="border-right:none ;" required>
+
+      <span class="input-group-text error-icon tt" data-bs-placement="bottom" title="Please Enter numbers only" id="addon-wrapping" style="background-color: white; border-left: none;">
+        <i class="bi bi-exclamation-circle"></i>
+      </span>
+    </div>
+    <!-- input for extra ends starts here -->
+
+    <!-- input for age group selection starts here -->
+    <label for="age">Enter age group <span class="tt" data-bs-placement="bottom"
+        title="Choose your age group from below"><i class="bi bi-question-circle"></i></span> </label>
+    <div class="flex-nowrap form-group input-group">
+
+      <select name="" id="age" class="" required>
+        <option value="" selected disabled>Select One</option>
+        <option value="1"> <40 </option>
+        <option value="2"> ≥ 40 & < 60</option>
+        <option value="3">  ≥ 60</option>
+
+    </select>
+      
+
+    </div>
+    <!-- input for age group selection ends here -->
+
+
+    <!-- input for applicable deduction starts here -->
+    <label for="all_d">Enter total applicable deduction <span class="tt" data-bs-placement="bottom"
+        title="Enter your total deduction "><i class="bi bi-question-circle"></i></span> 
+      </label> 
+
+    <div class="flex-nowrap  form-group input-group">
+      <input type="text" id="all_d"  placeholder="Enter all applicable deduction" aria-describedby="addon-wrapping" class="form-control"
+        style="border-right:none ;" required>
+      <span class="input-group-text error-icon tt" data-bs-placement="bottom" title="Please Enter numbers only" id="addon-wrapping" style="background-color: white; border-left: none;">
+        <i class="bi bi-exclamation-circle"></i>
+      </span>
+    </div>
+<!-- input for applicable deduction ends here -->
+
+      <!-- Submit button -->
+  <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+
+  </form>
+<!-- Form ends here -->
+
+<!-- JS file for tax deduction -->
+<script src="script.js"></script>
+
+  <!-- BootStrap modal code  -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered text-center" role="document">
+
+      <div class="modal-content" id="modal">
+        <div class="modal-header" >
+          <h5 class="modal-title" id="exampleModalLongTitle">Your Overall income will be</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body ">
+          <p> <span id="result"></span> <br> after tax deductions</p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+    <!--  code for JS tooltip -->
+   <script>
+    const tooltips = document.querySelectorAll('.tt')
+        tooltips.forEach(t => {
+          new bootstrap.Tooltip(t)
+        })
+   </script>
+
+    
+</body>
+
+</html>
