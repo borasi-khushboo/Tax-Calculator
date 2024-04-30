@@ -62,10 +62,6 @@ To run the Tax Calculator locally:
 4. Click the "Submit" button.
 5. A modal will appear displaying the calculated overall income after deducting your overall expenses and tax deductions.
 
-
-## Demo
-A live demo of the Tax Calculator can be accessed [here](https://khushboo967.000webhostapp.com/).
-
 ## All Cases
 
 1. When all input fields filled accurately.
